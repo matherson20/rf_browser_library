@@ -17,7 +17,7 @@ jobs:
       
       - name: Install Node.js 19.1
         uses: actions/setup-node@v3
-        whith:
+        with:
           node-version: '19.1'
       
       - name: Install Requirements
