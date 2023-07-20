@@ -26,7 +26,7 @@ jobs:
           pip install -U -r requirements.txt 
           sudo npm install @playwright/test
           sudo npx playwright install-deps
-          rfbrowser init ß
+          rfbrowser init 
 
       - name: Run RF Web Tests
         run: |
