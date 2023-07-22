@@ -7,15 +7,16 @@ on:
         type: string 
         description: Qual é a TAG a ser executada? 
         required: true 
+      browser:
+        type: string 
+        description: Qual é o navegador a ser executado? 
+        required: true 
+
 
 jobs:
   web-tests:
     runs-on: ubuntu-20.04
     permissions: write-all 
-    strategy:
-      matrix:
-        browser: [chromium, firefox, webkit]
-      fail-fast: false 
     steps:
 
       - name: Checkout
@@ -41,7 +42,7 @@ jobs:
 
       - name: Run RF Web Tests
         run: |
-          robot -d ./results -v HEADLESS:true -v BROWSER:${{ matrix.browser }} -i ${{ inputs.tag }} tests
+          robot -d ./results -v HEADLESS:true -v BROWSER: -i ${{ inputs.browser }} -i ${{ inputs.tag }} tests
 
       - name: Upload Tests Results
         if: always()

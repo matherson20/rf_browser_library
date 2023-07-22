@@ -13,7 +13,7 @@ Login com sucesso Serve Rest front
     Conferir usuário na listagem de usuários 
 
 Login com sucesso e Cadastro de produto
-    [Tags]    Login    Cadastro de Produto 
+    [Tags]    Cadastro de Produto 
     Abrir o navegador
     Ir para o site
     Preencher os dados e cadastrar
