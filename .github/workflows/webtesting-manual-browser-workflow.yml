@@ -1,5 +1,5 @@
-name: Manual Run Web Tests
-run-name: Manual Web Tests Run - Browser
+name: Manual Run Web Tests - Tag and Browser
+run-name: Manual Web Tests Run - Tag and Browser
 on: 
   workflow_dispatch: 
     inputs:
@@ -8,10 +8,13 @@ on:
         description: Qual é a TAG a ser executada? 
         required: true 
       browser:
-        type: string 
+        type: choice 
         description: Qual é o navegador a ser executado? 
         required: true 
-
+        options:
+        - "chromium"
+        - "firefox"
+        - "webkit"
 
 jobs:
   web-tests:
